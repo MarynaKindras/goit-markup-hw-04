@@ -96,6 +96,7 @@ body {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .menu {
@@ -104,12 +105,13 @@ body {
 }
 
 .menu-link {
-    /* Body Medium */
     display: block;
     padding: 24px 0;
     font-weight: 500;
     line-height: 1.5;
     color: var(--primary-color);
+    position: relative;
+    color: #404bbf;
 }
 
 .logo {
@@ -422,6 +424,8 @@ justify-content: center;
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: 0.02em;
+            display: flex;
+            align-items: baseline,
             /* margin-top: 16px; */
         }
 
