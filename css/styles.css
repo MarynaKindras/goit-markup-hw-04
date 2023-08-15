@@ -7,6 +7,7 @@
     --button-color: #F4F4FD;
     --accent-color: #2e2f42;
     --button-color-border: #e7e9fc;
+    --customer: #8e8f99;
 }
 
 h1,
@@ -190,6 +191,11 @@ body {
 /* ====== PAGE SECTION 1 ===== */
 
 .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(\images\hm04);
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 188px 0 188px;
     align-content: center;
     background-color: var(--accent-color);
@@ -289,6 +295,17 @@ body {
             flex-basis: calc((100% - 2 * 24px) / 3);
         }
 
+                .icon-values {
+                display: flex;
+                align-items: center;
+justify-content: center;
+     height: 112px;
+     background-color: #f4f4fd;
+     border-radius: 4px;
+     margin-bottom: 8px;
+    
+                }
+
     /* ====== PAGE SECTION 3 ===== */
 
     .second-title {
@@ -313,6 +330,10 @@ body {
 
     .team-cell {
             background-color: #FFFFFF;
+            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+                
             border-radius: 0px 0px 4px 4px;
         }
 
@@ -321,7 +342,8 @@ body {
                 }
 
                 .team-list {
-                    /* display: flex; */
+                    display: flex;
+                    justify-content: center;
                     gap: 24px;
                     display: flex;
                 }
@@ -337,7 +359,52 @@ body {
      text-align: center;
      padding: 32px 0;
  }
+
+ .product-designer {
+    width: 40px;
+    height: 40px;
+
+ }
+
     /* ====== PAGE SECTION 4 ===== */
+
+                /* ====== PAGE SECTION 5 ===== */
+
+
+        .customer-sestion {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+                .customer-list {
+                    display: flex;
+                    gap: 24px;
+                }
+
+    .customer-cell {
+        width: calc((100% - 120px) / 6);
+        height: 88px;
+    }
+
+        .customer-link {
+            width: 100%;
+            height: 100%;
+             border: 1px solid #8e8f99;
+              border-radius: 4px;
+              display: flex;
+                 align-items: center;
+                justify-content: center;
+                color: var(--customer);
+        }
+        
+        .customer-link:hover,
+                .customer-link:focus {
+                    border-color: #404bbf;
+                    border-color: #404bbf;
+                    color: #404bbf;
+
+        }
+        /* ====== PAGE SECTION 5 ===== */
 
         /* ====== PORTFOLIO ======= */
     
@@ -371,8 +438,12 @@ justify-content: center;
         border-radius: 4px;
         }
     
+Для button додано атрибут data-modal-open,
+який відповідає за відкриття модального вікна
+
         button {
             cursor: pointer;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     
         .menu-button:hover,
@@ -416,45 +487,44 @@ justify-content: center;
         /* ====== PAGE MAIN ===== */
     
     
-        /* ====== PAGE FOOTER ===== */
+          /* ====== PAGE FOOTER ===== */
     
-        .page-footer {
-            background-color: var(--accent-color);
-            padding: 100px 0;
-        }
-
-        .foot-container {
-                }
+          .page-footer {
+              background-color: var(--accent-color);
+              padding: 100px 0;
+          }
     
-        .logo-footer {
-            font-style: normal;
-            font-family: "Raleway", sans-serif;
-            font-weight: 800;
-            font-size: 18px;
-            line-height: 1.17;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: var(--logo-color);
-            margin-bottom: 16px;
-            display: inline-block;
-        }
+          .foot-container {}
     
-        .text-footer {
-            color: var(--button-color);
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.02em;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0.32px;
-            max-width: 264px;
-            
-        }
-
-        .accent {
-            color: #f4f4fd;
-        }
-
-                
+          .logo-footer {
+              font-style: normal;
+              font-family: "Raleway", sans-serif;
+              font-weight: 800;
+              font-size: 18px;
+              line-height: 1.17;
+              letter-spacing: 0.03em;
+              text-transform: uppercase;
+              color: var(--logo-color);
+              margin-bottom: 16px;
+              display: inline-block;
+          }
     
-        /* ====== PAGE FOOTER ===== */
+          .text-footer {
+              color: var(--button-color);
+              font-size: 16px;
+              line-height: 1.5;
+              letter-spacing: 0.02em;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0.32px;
+              max-width: 264px;
+    
+          }
+    
+          .accent {
+              color: #f4f4fd;
+          }
+    
+    
+    
+          /* ====== PAGE FOOTER ===== */
