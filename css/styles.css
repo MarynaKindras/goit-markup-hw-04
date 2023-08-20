@@ -409,15 +409,58 @@ justify-content: center;
                     padding-top: 96px;
                     padding-bottom: 120px;
                 }
+                                .portfolio-cell-descriptions {
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                
+                                .overlay {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    color: var(--cloud, #f4f4fd);
+                                    font-family: Roboto;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    /* 150% */
+                                    letter-spacing: 0.32px;
+                                    padding: 40px 32px;
+                                    background: #4d5ae5;
+                                    transform: translateY(100%);
+                                    transition: transform var(--transition-dur-adn-func);
+                                    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+                                        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+                                        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+                                }
+                
+                                .portfolio-link:hover .overlay,
+                                .portfolio-link:focus .overlay {
+                                    transform: translateY(0%);
+                                }
+                
+                                .portfolio-link {
+                                    display: block;
+                                    cursor: pointer;
+                                    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                                }
+                
+                                .portfolio-link:hover,
+                                .portfolio-link:focus {
+                                    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                                        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+                                }
     
 .menu-buttons {
+margin-bottom: 72px;
     display: flex;
-justify-content: center;
     gap: 24px;
-    margin-right: 24px;
-    margin-right: 0;
-    margin-bottom: 72px;
+    justify-content: center;
 }
+
 
         .menu-button {
             font-family: "Roboto", sans-serif;
@@ -431,10 +474,12 @@ justify-content: center;
         padding: 12px 24px;
         border: 1px solid var(--button-color-border);
         border-radius: 4px;
+
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-    
-Для button додано атрибут data-modal-open,
-який відповідає за відкриття модального вікна
 
         button {
             cursor: pointer;
@@ -446,6 +491,8 @@ justify-content: center;
             color: var(--white-color);
             background-color: var(--hover-color);
             border: 1px solid transparent;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
         }
     
         .title-list {
@@ -454,6 +501,7 @@ justify-content: center;
             line-height: 1.2;
             letter-spacing: 0.02em;
             color: var(--accent-color);
+            margin-bottom: 8px;
         }
     
         .text {
@@ -563,3 +611,77 @@ gap: 16px;
 
     
           /* ====== PAGE FOOTER ===== */
+
+                  /* -------------BACKDROP-------------- */
+                  .backdrop {
+                      position: fixed;
+                      z-index: 999;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgba(0, 0, 0, 0.5);
+                      transition: opacity 500ms linear, visibility 500ms linear;
+                  }
+        
+                  .is-hidden {
+                      opacity: 0;
+                      visibility: hidden;
+                      pointer-events: none;
+                  }
+
+                  /* -------------MODAL WINDOW-------------- */
+                  .backdrop {
+                      background-color: rgba(46, 47, 66, 0.4);
+                      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                          visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                  }
+        
+                  .modal {
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      width: 408px;
+                      min-height: 584px;
+                      background-color: #fcfcfc;
+                      transform: translate(-50%, -50%) scale(1);
+                      border-radius: 4px;
+                      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                      box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+                          0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+                  }
+        
+                  .close-btn {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      position: absolute;
+                      top: 24px;
+                      right: 24px;
+                      border-color: transparent;
+                      border: 1px solid rgba(0, 0, 0, 0.1);
+                      padding: 0;
+                      line-height: 0;
+                      background-color: #e7e9fc;
+                      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                          border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                      border-radius: 50%;
+                      width: 24px;
+                      height: 24px;
+                  }
+        
+                  .close-btn:hover,
+                  .close-btn:focus {
+                      border: none;
+                      fill: #fff;
+                      background-color: #404bbf;
+                  }
+        
+                  .close-btn:hover .close-btn-icon,
+                  .close-btn:focus .close-btn-icon {
+                      fill: #fff;
+                  }
+        
+                  .close-btn-icon {
+                      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                  }
