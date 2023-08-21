@@ -61,21 +61,6 @@ body {
 
 .section {
     padding-top: 120px;
-    padding-bottom: 0px;
-}
-
-.section-head {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.section-doing {
-    padding-top: 0px;
-    padding-bottom: 120px;
-}
-
-.section-team {
-    padding-top: 120px;
     padding-bottom: 120px;
 }
 
@@ -195,16 +180,21 @@ body {
 
 /* ====== PAGE SECTION 1 ===== */
 
+.section-head {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .hero {
+    padding: 188px 0 188px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hm04/people_office_1.jpg");
     max-width: 1440px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 188px 0 188px;
     align-content: center;
     background-color: var(--accent-color);
-    max-width: 1440px;
+
 }
 
 .main-title {
@@ -301,6 +291,11 @@ body {
 
     /* ====== PAGE SECTION 3 ===== */
 
+        .section-doing {
+             padding-top: 120px; 
+            padding-bottom: 120px;
+        }
+
     .second-title {
         font-size: 36px;
         line-height: 1.11;
@@ -310,7 +305,7 @@ body {
         color: var(--accent-color);
         margin-bottom: 72px;
     }
-    
+
 .doing-list {
     display: flex;
     gap: 24px;
@@ -322,6 +317,7 @@ body {
     /* ====== PAGE SECTION 3 ===== */
 
     /* ====== PAGE SECTION 4 ===== */
+
     .team-sestion {
         background-color: #F4F4FD;
         padding-top: 120px;
