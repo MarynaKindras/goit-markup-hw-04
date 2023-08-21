@@ -423,9 +423,9 @@ justify-content: center;
 
 
         .customer-sestion {
-            padding-top: 120px;
-            padding-bottom: 120px;
+        padding: 120px 0;
         }
+
 .customers-title {
     font-weight: 700;
     font-size: 36px;
@@ -446,6 +446,8 @@ justify-content: center;
                                 .customers-item {
                                     width: 168px;
                                     height: 88px;
+                                    width: calc((100% - 120px) / 6);
+                                        height: 88px;
                                 }
 
         .customers-link {
