@@ -310,6 +310,7 @@ body {
         color: var(--accent-color);
         margin-bottom: 72px;
     }
+    
 .doing-list {
     display: flex;
     gap: 24px;
